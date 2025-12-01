@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cartonboxd</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img src="../imagenes/Cartonboxd.png" alt="Logo"></a></li>
+                <li class="item"><a href="index.html">Inicio</a></li>
+                <li class="item"><a href="somos.html">¿Quiénes somos?</a></li>
+                <li class="item"><a href="reseñas.html">Reseñas</a></li>
+                <li class="item"><a href="contacto.html">Contacto</a></li>
+                <li id="authLinks" class="item auth">
+                    <a class="login-link" href="login.html">Inicia sesión</a> 
+                    <a class="register-link" href="registro.html">Regístrate</a>
+                </li>
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contacto-hero">
+        <h2>Ponte en contacto con nosotros</h2>
+        <p>¿Tienes preguntas o sugerencias? Nos encantaría saber de ti.</p>
+    </div>
+
+    <main>
+        <section class="contacto">
+            <h3>Contacto</h3>
+            <form action="../contac.php" name="contactoForm" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Nombre de usuario:</label>
+                        <input type="text" id="name" name="user_name" placeholder="Tu nombre" required />
+                    </li>
+                    <li>
+                        <label for="msg">Mensaje:</label>
+                        <textarea id="msg" name="user_message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </li>
+                    <li>
+                        <button type="submit" name="envia">Enviar Mensaje</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/auth.js" defer></script>
+</body>
+</html>

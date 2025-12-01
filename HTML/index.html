@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartonboxd</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="../JS/userlocal.js" defer></script>
+    <header  class="hero">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img src="../imagenes/Cartonboxd.png" alt="Logo"></a></li>
+                <li class="item"><a href="index.html">Inicio</a></li>
+                <li class="item"><a href="somos.html">¿Quiénes somos?</a></li>
+                <!-- <li class="item"><a href="reseñas.html" style="display: none;">Reseñas</a></li> -->
+                <li class="item"><a href="contacto.html">Contacto</a></li>
+                <li id="authLinks" class="item auth">
+                    <a class="login-link" href="login.html">Inicia sesión</a> 
+                    <a class="register-link" href="registro.html">Regístrate</a>
+                </li>
+                
+                
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-text">
+            <h1>Cartonboxd</h1>
+            <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caótica hermosa.</p>
+            <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion">
+            <h3>Últimas vistas</h3> <br>
+            <div class="carrusel">
+                <div class="carrusel-inner">
+                    <div class="slide">
+                        <img src="../imagenes/Hambre.jpg" alt="Pelicula Los Juegos del Hambre">
+                        <div class="overlay">
+                            <h2>Los Juegos del Hambre</h2>
+                            <p>Mi serie distópica favorita: contraste visual, crítica social y revolución.</p>
+                            <a href="https://letterboxd.com/film/the-hunger-games-catching-fire/" class="cta-btn">Saber más</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../imagenes/3.jpg" alt="Pelicula Harry Potter">
+                        <div class="overlay">
+                            <h2>Harry Potter</h2>
+                            <p>La obra modela un símbolo de desafío — el Sinsajo — motor de rebelión.</p>
+                            <a href="https://letterboxd.com/film/harry-potter-and-the-philosophers-stone/" class="cta-btn">Conocer</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../imagenes/6.jpg" alt="Pelicula Viernes 13">
+                        <div class="overlay">
+                            <h2>Viernes 13</h2>
+                            <p>Ya no es sobrevivir: es derrocar al sistema que los oprime.</p>
+                            <a href="https://letterboxd.com/film/friday-the-13th-the-final-chapter/" class="cta-btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev"><</button>
+                <button class="next">></button>
+            </div>
+        </section>
+
+        <section class="cards-seccion">
+            <h3>Estética de vida real</h3> 
+            <br>
+            <div class="cards-container">
+                <article class="card">
+                    <img src="../Imágenes/Un monton.jpg" alt="Responsive Design">
+                    <h4>Caos funcional</h4>
+                    <p>No sé si estoy floreciendo o colapsando, pero se ve lindo.</p>
+                </article>
+                <article class="card">
+                    <img src="../Imágenes/posture reveal.png" alt="Flexbox">
+                    <h4>Lumbar en huelga</h4>
+                    <p>Mi espalda nunca estuvo de acuerdo con mis decisiones de adultez.</p>
+                </article>
+                <article class="card">
+                    <img src="../Imágenes/Patita.jpg" alt="CSS Grid">
+                    <h4>Neurosis pitbulliana</h4>
+                    <p>Ansiedad, energía y amor incondicional en un solo paquete canino.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="../JS/listar.js" defer></script> -->
+    <script src="../JS/carrusel.js" defer></script>
+    <script src="../JS/auth.js" defer></script>
+</body>
+</html>
