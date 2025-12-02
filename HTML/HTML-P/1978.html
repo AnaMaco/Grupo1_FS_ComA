@@ -1,46 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartonboxd</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>1978 - Cartonboxd</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Cartonboxd</h1>
-        <nav>
+    <header class="hero">
+        <nav class="navbar">
             <ul class="menu">
-                <li class="logo"><a href="../HTML/index.html"><img src="../Imágenes/logo.png" alt=""></a></li>
-                <li class="item"><a href="../HTML/index.html">Inicio</a></li>
-                <li class="item"><a href="../HTML/sobremi.html">¿Quiénes somos?</a></li>
-                <li class="item"><a href="../HTML/blog.html">Reseñas</a></li>
-                <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
-                <li class="item button"><a href="#">Inicia sesión</a></li>
-                <li class="item button secondary"><a href="#">Registrate</a></li>
+                <li class="logo"><a href="../index.html"><img src="../../IMG/Cartonboxd.png" alt="Logo de Cartonboxd"></a></li>
+                <li class="item"><a href="../index.html">Inicio</a></li>
+                <li class="item"><a href="../somos.html">¿Quiénes somos?</a></li>
+                <li class="item"><a href="../reseñas.html">Reseñas</a></li>
+                <li class="item"><a href="../peliculas.html">Películas</a></li>
+                <li class="item"><a href="../contacto.html">Contacto</a></li>
+                <li id="authLinks" class="item auth">
+                    <a class="login-link" href="../login.html">Inicia sesión</a> 
+                    <a class="register-link" href="../registro.html">Regístrate</a>
+                </li>
                 <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
         </nav>
-        <h2>¡Sean bienvenidos al mundo del consumo sin culpa!</h2>
     </header> 
     <main>
-        <div class="card-movie">
-            <img src="../IMG/pelicula-27noches" alt="'27 noches' (2025) Dir: Daniel hendler">
-            <h4 class="mov-title">27 Noches (2025)</h4>
-            <p class="mov-directedby">Dirigida por Daniel Hendler</p>
-            <p class="mov-hook">¿Locura real o herencia robada?</p>
-            <p>Una anciana adinerada es internada por demencia, pero un perito duda de las intenciones de sus hijas. Basada en un caso real, expone la codicia familiar y la corrupción médica. Una comedia negra sobre la vejez y el dinero.</p>
-        </div>
+        <section class="movie-detail">
+            <div class="movie-header">
+                <h1 class="movie-title">1978</h1>
+                <p class="movie-year">2024</p>
+            </div>
+
+            <div class="movie-container">
+                <div class="movie-poster">
+                    <img src="../../IMG/IMG-P/pelicula-1978.png" alt="Fotograma de 1978">
+                </div>
+
+                <div class="movie-info">
+                    <div class="info-item">
+                        <h3>Dirección</h3>
+                        <p>Luciano Onetti y Nicolás Onetti</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Año</h3>
+                        <p>2024</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Género</h3>
+                        <p>Terror/Drama</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Duración</h3>
+                        <p>80 minutos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-content">
+                <div class="synopsis">
+                    <h3>Sinopsis</h3>
+                    <p>En el marco de la final del Mundial '78, un grupo de personas es secuestrado por paramilitares. Lo que comienza como un interrogatorio inhumano se convierte en un martirio. Los jóvenes resultan ser parte de un macabro culto guiado por una fuerza sobrenatural. El centro clandestino de detención se transforma en el infierno.</p>
+                </div>
+
+                <div class="review-section">
+                    <h3>Nuestra reseña</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5/5</span>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="../reseñas.html" class="cta-btn">Dejar tu reseña</a>
+                    <a href="../peliculas.html" class="back-btn">Volver al catálogo</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>© 2025 Cartonboxd</p>
+        <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../JS/listar.js" defer></script>
-    <script src="../JS/carrusel.js" defer></script>
+    <script src="../../JS/listar.js" defer></script>
 </body>
 </html>

@@ -1,46 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartonboxd</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Freaky Friday - Cartonboxd</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Cartonboxd</h1>
-        <nav>
+    <header class="hero">
+        <nav class="navbar">
             <ul class="menu">
-                <li class="logo"><a href="../HTML/index.html"><img src="../Imágenes/logo.png" alt=""></a></li>
-                <li class="item"><a href="../HTML/index.html">Inicio</a></li>
-                <li class="item"><a href="../HTML/sobremi.html">¿Quiénes somos?</a></li>
-                <li class="item"><a href="../HTML/blog.html">Reseñas</a></li>
-                <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
-                <li class="item button"><a href="#">Inicia sesión</a></li>
-                <li class="item button secondary"><a href="#">Registrate</a></li>
+                <li class="logo"><a href="../index.html"><img src="../../IMG/Cartonboxd.png" alt="Logo de Cartonboxd"></a></li>
+                <li class="item"><a href="../index.html">Inicio</a></li>
+                <li class="item"><a href="../somos.html">¿Quiénes somos?</a></li>
+                <li class="item"><a href="../reseñas.html">Reseñas</a></li>
+                <li class="item"><a href="../peliculas.html">Películas</a></li>
+                <li class="item"><a href="../contacto.html">Contacto</a></li>
+                <li id="authLinks" class="item auth">
+                    <a class="login-link" href="../login.html">Inicia sesión</a> 
+                    <a class="register-link" href="../registro.html">Regístrate</a>
+                </li>
                 <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
         </nav>
-        <h2>¡Sean bienvenidos al mundo del consumo sin culpa!</h2>
     </header> 
     <main>
-        <div class="card-movie">
-            <img src="../IMG/pelicula-freakierfriday alt="'Freakier Friday' (2025) Dir: Nisha Ganatra">
-            <h4 class="mov-title">Freakier Friday (2025)</h4>
-            <p class="mov-directedby">Dirigida por Nisha Ganatra</p>
-            <p class="mov-hook">¿Quién eres realmente hoy?</p>
-            <p>Años después, madre e hija (Curtis y Lohan) vuelven a sufrir un intercambio de cuerpos. Deben resolver sus crisis de identidad mientras intentan no arruinar sus vidas. La magia regresa para forzar la empatía.</p>
-        </div>
+        <section class="movie-detail">
+            <div class="movie-header">
+                <h1 class="movie-title">Freaky Friday</h1>
+                <p class="movie-year">2003</p>
+            </div>
+
+            <div class="movie-container">
+                <div class="movie-poster">
+                    <img src="../../IMG/IMG-P/pelicula-freakyfriday.png" alt="Fotograma de Freaky Friday">
+                </div>
+
+                <div class="movie-info">
+                    <div class="info-item">
+                        <h3>Dirección</h3>
+                        <p>Mark Waters</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Año</h3>
+                        <p>2003</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Género</h3>
+                        <p>Infantil/Comedia</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Duración</h3>
+                        <p>95 minutos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-content">
+                <div class="synopsis">
+                    <h3>Sinopsis</h3>
+                    <p>Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.</p>
+                </div>
+
+                <div class="review-section">
+                    <h3>Nuestra reseña</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5/5</span>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="../reseñas.html" class="cta-btn">Dejar tu reseña</a>
+                    <a href="../peliculas.html" class="back-btn">Volver al catálogo</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>© 2025 Cartonboxd</p>
+        <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../JS/listar.js" defer></script>
-    <script src="../JS/carrusel.js" defer></script>
+    <script src="../../JS/listar.js" defer></script>
 </body>
 </html>
