@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas </title>
+    <title>Reseñas - Cartonboxd</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,34 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<header  class="hero">
-    <nav class="navbar">
-        <ul class="menu">
-            <li class="logo"><a href="../HTML/index.html"><img src="../imagenes/Cartonboxd.png" alt="Logo"></a></li>
-            <li class="item"><a href="../HTML/index.html">Inicio</a></li>
-            <li class="item"><a href="../HTML/somos.html">¿Quiénes somos?</a></li>
-            <li class="item"><a href="../HTML/reseñas.html">Reseñas</a></li>
-            <li class="item"><a href="../HTML/peliculas.html">Películas</a></li>
-            <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
-            <li id="authLinks" class="item auth">
-                <a class="login-link" href="/HTML/login.html">Inicia sesión</a> 
-                <a class="register-link" href="/HTML/registro.html">Regístrate</a>
-            </li>
-            
-            
-            </li>
-            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul>
-    </nav>
-
-    <div class="hero-text">
-        <h1>Cartonboxd</h1>
-        <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caótica hermosa.</p>
-        <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
-    </div>
-</header>
-
 <body>
+    <header  class="hero">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="logo"><a href="../HTML/index.html"><img src="../IMG/Cartonboxd.png" alt="Logo de Cartonboxd"></a></li>
+                <li class="item"><a href="../HTML/index.html">Inicio</a></li>
+                <li class="item"><a href="../HTML/somos.html">¿Quiénes somos?</a></li>
+                <li class="item"><a href="../HTML/reseñas.html">Reseñas</a></li>
+                <li class="item"><a href="../HTML/peliculas.html">Películas</a></li>
+                <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
+                <li id="authLinks" class="item auth">
+                    <a class="login-link" href="/HTML/login.html">Inicia sesión</a> 
+                    <a class="register-link" href="/HTML/registro.html">Regístrate</a>
+                </li>
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-text">
+            <h1>Cartonboxd</h1>
+            <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caótica hermosa.</p>
+            <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
+        </div>
+    </header>
+
     <script>
     // Si el servidor redirige con ?user=nombre, guardarlo en localStorage temprano
     (function(){
@@ -55,7 +52,6 @@
         }catch(e){}
     })();
     </script>
-
     
 <main>
     <div id="auth-message" style="display:none; padding: 5px; background-color: #f0ad4e; color: white; border-radius: 5px; margin: 130px;">
@@ -95,15 +91,13 @@
         <h2>Reseñas de usuarios</h2>
         <!-- Aquí se mostrarán las reseñas -->
     </div>
-</main>
-<script src="../JS/auth.js" defer></script>
-  <script src="../JS/reseña.js" defer></script>
-
+    <script src="../JS/auth.js" defer></script>
+    <script src="../JS/reseña.js" defer></script>
 
 </main>
 
     <footer>
-        <p>© 2025 Cartonboxd</p>
+        <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../JS/listar.js" defer></script>
