@@ -10,6 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+<header  class="hero">
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="logo"><a href="../HTML/index.html"><img src="../imagenes/Cartonboxd.png" alt="Logo"></a></li>
+            <li class="item"><a href="../HTML/index.html">Inicio</a></li>
+            <li class="item"><a href="../HTML/somos.html">¿Quiénes somos?</a></li>
+            <li class="item"><a href="../HTML/reseñas.html">Reseñas</a></li>
+            <li class="item"><a href="../HTML/peliculas.html">Películas</a></li>
+            <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
+            <li id="authLinks" class="item auth">
+                <a class="login-link" href="/HTML/login.html">Inicia sesión</a> 
+                <a class="register-link" href="/HTML/registro.html">Regístrate</a>
+            </li>
+            
+            
+            </li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-text">
+        <h1>Cartonboxd</h1>
+        <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caótica hermosa.</p>
+        <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
+    </div>
+</header>
+
 <body>
     <script>
     // Si el servidor redirige con ?user=nombre, guardarlo en localStorage temprano
@@ -27,31 +55,7 @@
         }catch(e){}
     })();
     </script>
-    <header  class="hero">
-        <nav class="navbar">
-            <ul class="menu">
-                <li class="logo"><a href="../HTML/index.html"><img src="../imagenes/Cartonboxd.png" alt="Logo"></a></li>
-                <li class="item"><a href="../HTML/index.html">Inicio</a></li>
-                <li class="item"><a href="../HTML/somos.html">¿Quiénes somos?</a></li>
-                <li class="item"><a href="../HTML/reseñas.html" style="display: none;">Reseñas</a></li>
-                <li class="item"><a href="../HTML/contacto.html">Contacto</a></li>
-                <li id="authLinks" class="item auth">
-                    <a class="login-link" href="/HTML/login.html">Inicia sesión</a> 
-                    <a class="register-link" href="/HTML/registro.html">Regístrate</a>
-                </li>
-                
-                
-                </li>
-                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-            </ul>
-        </nav>
 
-        <div class="hero-text">
-            <h1>Cartonboxd</h1>
-            <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caótica hermosa.</p>
-            <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
-        </div>
-    </header>
     
 <main>
     <div id="auth-message" style="display:none; padding: 5px; background-color: #f0ad4e; color: white; border-radius: 5px; margin: 130px;">
