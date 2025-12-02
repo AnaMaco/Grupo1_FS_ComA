@@ -1,5 +1,5 @@
 /* ==========================
-   STYLESHEET REDISEÑADO 2025
+    STYLESHEET REDISEÑADO 2025
    ========================== */
 
 /* Paleta principal */
@@ -30,7 +30,7 @@ body{
     textarea { width: 100%; height: 60px; }
     .puntuacion { margin-top: 5px; }
 /* ==========================
-   NAVBAR
+    NAVBAR
    ========================== */
 nav{
     background:var(--nav-bg);
@@ -103,7 +103,7 @@ nav{
 .toggle{display:none}
 
 /* ==========================
-   HERO SECTION
+    HERO SECTION
    ========================== */
 .hero{
     background:linear-gradient(180deg,var(--bg-secondary),var(--bg-main) 60%);
@@ -134,7 +134,7 @@ nav{
 .hero-btn:hover{background:var(--accent2)}
 
 /* ==========================
-   MAIN
+    MAIN
    ========================== */
 main{
     max-width:1100px;
@@ -145,7 +145,7 @@ main{
 section{margin:3rem 0}
 
 /* ==========================
-   CAROUSEL
+    CAROUSEL
    ========================== */
 .carrusel{
     width:60%;
@@ -201,7 +201,7 @@ section{margin:3rem 0}
 .prev{left:8px}
 .next{right:8px}
 /* ==========================
-   CARDS
+    CARDS
    ========================== */
 .cards-container{
     display:flex;
@@ -227,7 +227,7 @@ section{margin:3rem 0}
 .card h4{color:white;margin:0.5rem 0}
 
 /* ==========================
-   FOOTER
+    FOOTER
    ========================== */
 footer{
     background:var(--bg-secondary);
@@ -238,12 +238,12 @@ footer{
 }
 
 /* ==========================
-   RESPONSIVE NAV
+    RESPONSIVE NAV
    ========================== */
 @media(max-width:900px){.toggle{display:block}.item{display:none}.item.active{display:block}}
 
 /* ==========================
-   ESTILOS PARA RESEÑAS
+    ESTILOS PARA RESEÑAS
    ========================== */
 
 #form-container {
@@ -378,7 +378,7 @@ footer{
 }
 
 /* ==========================
-   CONTACTO PAGE
+    CONTACTO PAGE
    ========================== */
 .contacto-hero {
     background: linear-gradient(180deg, var(--bg-secondary), var(--bg-main) 60%);
@@ -470,7 +470,7 @@ footer{
 }
 
 /* ==========================
-   ALERTAS (contacto.php)
+    ALERTAS (contacto.php)
    ========================== */
 .alerta {
     background: var(--card);
@@ -537,7 +537,7 @@ footer{
 }
 
 /* ==========================
-   PÁGINAS DE MENSAJE (éxito / error)
+    PÁGINAS DE MENSAJE (éxito / error)
    ========================== */
 .page-body{
     font-family: "Delius", sans-serif;
@@ -594,7 +594,7 @@ footer{
 }
 
 /* ==========================
-   PÁGINA SOMOS
+    PÁGINA SOMOS
    ========================== */
 .somos-container{
     max-width: 1000px;
@@ -657,4 +657,48 @@ footer{
 @media (max-width:560px){
     .member{ width: 100%; }
     .somos-container{ padding: 24px; }
+}
+/*Estilo página Películas*/
+/*Estilo de las cards*/
+.container-cards{
+    display: flex; /* Habilita Flexbox para alinear los elementos hijos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 3rem; /* Espacio entre las cards */
+    /*justify-content: ; /* Centra los elementos verticalmente si hay espacio extra */
+}
+
+/* Estilo individual de cada card */
+.cards-hor{
+    background: #a11191; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px black; /* Sombra para dar profundidad */
+    flex-basis: 100%; /* Ancho base de la card, ocupa el 100% en móvil */
+    max-width: 600px; /* Ancho máximo para la card horizontal */
+    padding: 1rem; /* Relleno interior */
+    display: flex; /* Usamos flexbox para alinear imagen y texto */
+    flex-direction: column; /* Apila la imagen y el texto verticalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 1rem; /* Espacio entre la imagen y el texto */
+}
+.cards-hor img {
+    width: 150px; /* Ancho fijo para la imagen */
+    height: 150px; /* Alto fijo para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+.cards-hor:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el cursor */
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+    transition: all 0.3s ease; /* Suaviza la transición */
+    font-style: normal;
+}
+
+.cards-hor .card-content {
+    text-align: center; /* Alinea el texto a la izquierda */
+}
+
+article{
+    margin: 10px;
 }
