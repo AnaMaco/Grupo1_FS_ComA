@@ -925,42 +925,246 @@ footer{
     }
 }
 
+/* ==========================
+   DETALLE DE PELÍCULA (HTML-P)
+   ========================== */
+.movie-detail {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.movie-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.movie-title {
+    font-family: "Comforter Brush", cursive;
+    font-size: 3.5rem;
+    color: var(--accent);
+    text-shadow: 0 2px 8px rgba(217, 0, 129, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.movie-year {
+    font-size: 1.2rem;
+    color: var(--soft);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal película */
+.movie-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.movie-poster {
+    display: flex;
+    justify-content: center;
+}
+
+.movie-poster img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(217, 0, 129, 0.4);
+    border: 3px solid var(--accent2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.movie-poster img:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 12px 32px rgba(217, 0, 129, 0.6);
+}
+
+/* Info de película */
+.movie-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-item {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(217, 0, 129, 0.3);
+}
+
+.info-item h3 {
+    color: var(--accent);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.info-item p {
+    color: var(--soft);
+    font-size: 1.1rem;
+}
+
+/* Contenido de película */
+.movie-content {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.synopsis,
+.review-section {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid var(--accent);
+}
+
+.synopsis h2,
+.review-section h2 {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    font-family: "Comforter Brush", cursive;
+}
+
+.synopsis p,
+.review-section p {
+    color: var(--soft);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.rating-text {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: rgba(217, 0, 129, 0.1);
+    border-radius: 12px;
+    border: 2px solid var(--accent2);
+}
+
+.cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(217, 0, 129, 0.3);
+}
+
+.cta-btn:hover {
+    background: var(--accent2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(217, 0, 129, 0.5);
+}
+
+.back-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    padding: 14px 32px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
 /* Responsive */
-@media (max-width: 768px) {
-    .container-cards {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+@media (max-width: 900px) {
+    .movie-container {
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .filter-bar {
-        flex-direction: column;
+    .movie-title {
+        font-size: 2.5rem;
     }
 
-    .search-input,
-    .filter-select {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .card-link {
-        height: 220px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-cards {
+    .movie-info {
         grid-template-columns: 1fr;
     }
 
-    .cards-hor {
-        max-width: 100%;
+    .movie-poster img {
+        max-width: 300px;
     }
 
-    .section-header h2 {
-        font-size: 1.8rem;
+    .cta-section {
+        flex-direction: column;
+    }
+
+    .cta-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .movie-title {
+        font-size: 2rem;
+    }
+
+    .synopsis,
+    .review-section {
+        padding: 1.5rem;
+    }
+
+    .movie-poster img {
+        max-width: 250px;
+    }
+
+    .cta-btn,
+    .back-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 }
