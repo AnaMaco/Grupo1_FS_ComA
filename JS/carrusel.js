@@ -11,7 +11,7 @@ const totalSlides = slides.length;
 // Función para cambiar slide
 function goToSlide(n) {
     currentSlide = (n + totalSlides) % totalSlides;
-    carruselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
     updateIndicators();
 }
 
@@ -23,11 +23,11 @@ function updateIndicators() {
 }
 
 // Botones siguiente/anterior
-document.querySelector('.next').addEventListener('click', () => {
+nextButton.addEventListener('click', () => {
     goToSlide(currentSlide + 1);
 });
 
-document.querySelector('.prev').addEventListener('click', () => {
+prevButton.addEventListener('click', () => {
     goToSlide(currentSlide - 1);
 });
 
@@ -38,7 +38,7 @@ indicators.forEach(indicator => {
     });
 });
 
-// Auto-avance (opcional)
+// Auto-avance
 setInterval(() => {
     goToSlide(currentSlide + 1);
 }, 6000);
