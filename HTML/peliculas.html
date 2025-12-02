@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Delius&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Cartonboxd</h1>
-        <nav>
+    <header class="hero">
+        <nav class="navbar">
             <ul class="menu">
                 <li class="logo"><a href="index.html"><img src="../IMG/Cartonboxd.png" alt="Logo de Cartonboxd"></a></li>
                 <li class="item"><a href="index.html">Inicio</a></li>
@@ -28,147 +27,801 @@
                 <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
         </nav>
-        <h2>¡Sean bienvenidos al mundo del consumo sin culpa!</h2>
+        <div class="hero-text">
+            <h1>Cartonboxd</h1>
+            <p class="hero-sub">Nuestro catálogo: películas que desafían, sorprenden y marcan.</p>
+        </div>
     </header>  
+    
     <main>
-        <section>
-            <h3>Últimas vistas</h3>
+        <section class="movies-section">
+            
+            <div class="filter-bar">
+                <input type="text" id="searchMovies" placeholder="🔍 Busca una película..." class="search-input">
+                <select id="filterYear" class="filter-select">
+                    <option value="">Todos los años</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2020s">2020s</option>
+                    <option value="2010s">2010s</option>
+                    <option value="2000s">2000s</option>
+                    <option value="1990s">1990s</option>
+                    <option value="1980s">1980s</option>
+                </select>
+            </div>
+
             <div class="container-cards">
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/belen.html"><img src="../IMG/IMG-P/pelicula-belen.png" alt="'Belén' (2025) Dir: Dolores Fonzi"></a>
+                <article class="cards-hor" data-title="Belén" data-year="2025">
+                    <a href="../HTML/HTML-P/belen.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-belen.png" alt="'Belén' (2025) Dir: Dolores Fonzi" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Belén (2025)</h4>
                         <p class="mov-directedby">Dirigida por Dolores Fonzi</p>
                         <p class="mov-hook">¿Es delito ser mujer pobre?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/27noches.html"><img src="../IMG/IMG-P/pelicula-27noches.png" alt="'27 noches' (2025) Dir: Daniel Hendler"></a>
+                
+                <article class="cards-hor" data-title="27 Noches" data-year="2025">
+                    <a href="../HTML/HTML-P/27noches.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-27noches.png" alt="'27 noches' (2025) Dir: Daniel Hendler" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">27 Noches (2025)</h4>
                         <p class="mov-directedby">Dirigida por Daniel Hendler</p>
                         <p class="mov-hook">¿Es demencia o plan familiar?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/1978.html"><img src="../IMG/IMG-P/pelicula-1978.png" alt="'1978' (2024) Dir: Luciano Onetti y Nicolás Onetti"></a>
+                <article class="cards-hor" data-title="1978" data-year="2025">
+                    <a href="../HTML/HTML-P/1978.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-1978.png" alt="'1978' (2024) Dir: Luciano Onetti y Nicolás Onetti" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">1978 (2025)</h4>
                         <p class="mov-directedby">Dirigida por N. y L. Onetti</p>
                         <p class="mov-hook">¿Torturadores humanos o demonios reales?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/bringherback.html"><img src="../IMG/IMG-P/pelicula-bringherback.png" alt="'Bring her back' (2025) Dir: Danny Philippou y Michael Philippou"></a>
+                <article class="cards-hor" data-title="Bring Her Back" data-year="2025">
+                    <a href="../HTML/HTML-P/bringherback.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-bringherback.png" alt="'Bring her back' (2025) Dir: Danny Philippou y Michael Philippou" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Bring Her Back (2025)</h4>
                         <p class="mov-directedby">Dirigida por D. y M. Philippou</p>
                         <p class="mov-hook">¿Qué precio tiene la resurrección?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/eddington.html"><img src="../IMG/IMG-P/pelicula-eddington.png" alt="'Eddington' (2025) Dir: Ari Aster"></a>
+                <article class="cards-hor" data-title="Eddington" data-year="2025">
+                    <a href="../HTML/HTML-P/eddington.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-eddington.png" alt="'Eddington' (2025) Dir: Ari Aster" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Eddington (2025)</h4>
                         <p class="mov-directedby">Dirigida por Ari Aster</p>
                         <p class="mov-hook">¿Sobrevivirá el pueblo al odio?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/themapthatleadstoyou.html"><img src="../IMG/IMG-P/pelicula-themapthatleadstoyou.png" alt="'The map that leads to you' (2025) Dir: Lasse Hallström"></a>
+                <article class="cards-hor" data-title="The Map That Leads to You" data-year="2025">
+                    <a href="../HTML/HTML-P/themapthatleadstoyou.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-themapthatleadstoyou.png" alt="'The map that leads to you' (2025) Dir: Lasse Hallström" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver >
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">The Map That Leads to You (2025)</h4>
                         <p class="mov-directedby">Dirigida por Lasse Hallström</p>
                         <p class="mov-hook">¿Existe el destino perfecto?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/f1.html"><img src="../IMG/IMG-P/pelicula-f1.png" alt="'F1' (2025) Dir: Joseph Kosinski"></a>
+                <article class="cards-hor" data-title="F1" data-year="2025">
+                    <a href="../HTML/HTML-P/f1.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-f1.png" alt="'F1' (2025) Dir: Joseph Kosinski" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">F1 (2025)</h4>
                         <p class="mov-directedby">Dirigida por Joseph Kosinski</p>
                         <p class="mov-hook">¿Vale la vida la victoria?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/freakyfriday.html"><img src="../IMG/IMG-P/pelicula-freakyfriday.png" alt="'Freaky Friday' (2003) Dir: Mark Waters"></a>
+                <article class="cards-hor" data-title="Freaky Friday" data-year="2003">
+                    <a href="../HTML/HTML-P/freakyfriday.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-freakyfriday.png" alt="'Freaky Friday' (2003) Dir: Mark Waters" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
-                        <h4 class="mov-title">Freaky Friday (2025)</h4>
+                        <h4 class="mov-title">Freaky Friday (2003)</h4>
                         <p class="mov-directedby">Dirigida por Mark Waters</p>
                         <p class="mov-hook">¿El caos es hereditario?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/freakierfriday.html"><img src="../IMG/IMG-P/pelicula-freakierfriday.png" alt="'Freaky Friday' (2025) Dir: Nisha Ganatra"></a>
+                <article class="cards-hor" data-title="Freakier Friday" data-year="2025">
+                    <a href="../HTML/HTML-P/freakierfriday.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-freakierfriday.png" alt="'Freaky Friday' (2025) Dir: Nisha Ganatra" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Freakier Friday (2025)</h4>
                         <p class="mov-directedby">Dirigida por Nisha Ganatra</p>
                         <p class="mov-hook">¿Quién sos realmente hoy?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/honeydont.html"><img src="../IMG/IMG-P/pelicula-honeydont.png" alt="'Honey, don't' (2025) Dir: Ethan Coen"></a>
+                <article class="cards-hor" data-title="Honey, Don't" data-year="2025">
+                    <a href="../HTML/HTML-P/honeydont.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-honeydont.png" alt="'Honey, don't' (2025) Dir: Ethan Coen" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Honey Don't (2025)</h4>
                         <p class="mov-directedby">Dirigida por Ethan Coen</p>
                         <p class="mov-hook">¿Puede un culto salvarte?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/mickey17.html"><img src="../IMG/IMG-P/pelicula-mickey17.png" alt="'Mickey 17' (2025) Dir: Boong Joon-ho"></a>
+                <article class="cards-hor" data-title="Mickey 17" data-year="2025">
+                    <a href="../HTML/HTML-P/mickey17.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-mickey17.png" alt="'Mickey 17' (2025) Dir: Boong Joon-ho" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Mickey 17 (2025)</h4>
                         <p class="mov-directedby">Dirigida por Bong Joon-ho</p>
                         <p class="mov-hook">¿Cuántas veces puedes morir?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/promqueen.html"><img src="../IMG/IMG-P/pelicula-promqueen.png" alt="'Fear the Street: Prom Queen' (2025) Dir: Matt Palmer"></a>
+                <article class="cards-hor" data-title="Fear the Street: Prom Queen" data-year="2025">
+                    <a href="../HTML/HTML-P/promqueen.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-promqueen.png" alt="'Fear the Street: Prom Queen' (2025) Dir: Matt Palmer" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Fear the Street: Prom Queen (2025)</h4>
                         <p class="mov-directedby">Dirigida por Matt Palmer</p>
                         <p class="mov-hook">¿Morirías por esa corona?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/sinners.html"><img src="../IMG/IMG-P/pelicula-sinners.png" alt="'Sinners' (2025) Dir: Ryan Coogler"></a>
+                <article class="cards-hor" data-title="Sinners" data-year="2025">
+                    <a href="../HTML/HTML-P/sinners.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-sinners.png" alt="'Sinners' (2025) Dir: Ryan Coogler" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Sinners (2025)</h4>
                         <p class="mov-directedby">Dirigida por Ryan Coogler</p>
                         <p class="mov-hook">¿El mal se hereda siempre?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/theelectricstate.html"><img src="../IMG/IMG-P/pelicula-theelectrictstate.png" alt="'The electric state' (2025)"></a>
+                <article class="cards-hor" data-title="The Electric State" data-year="2025">
+                    <a href="../HTML/HTML-P/theelectricstate.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-theelectrictstate.png" alt="'The electric state' (2025)" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver >
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">The Electric State (2025)</h4>
                         <p class="mov-directedby">Dirigida por A. y J. Russo</p>
                         <p class="mov-hook">¿Queda humanidad en las máquinas?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/themonkey.html"><img src="../IMG/IMG-P/pelicula-themonkey.png" alt="'The monkey' (2025) Dir: Osgood Perkins"></a>
+                <article class="cards-hor" data-title="The Monkey" data-year="2025">
+                    <a href="../HTML/HTML-P/themonkey.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-themonkey.png" alt="'The monkey' (2025) Dir: Osgood Perkins" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">The Monkey (2025)</h4>
                         <p class="mov-directedby">Dirigida por Osgood Perkins</p>
                         <p class="mov-hook">¿Puedes escapar de tu suerte?</p>
                     </div>
                 </article>
-                <article class="cards-hor">
-                    <a href="../HTML/HTML-R/weapons.html"><img src="../IMG/IMG-P/pelicula-weapons.png" alt="'Weapons' (2025) Dir: Zach Cregger"></a>
+                <article class="cards-hor" data-title="Weapons" data-year="2025">
+                    <a href="../HTML/HTML-P/weapons.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-weapons.png" alt="'Weapons' (2025) Dir: Zach Cregger" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <h4 class="mov-title">Weapons (2025)</h4>
                         <p class="mov-directedby">Dirigida por Zach Cregger</p>
                         <p class="mov-hook">¿A dónde van los niños?</p>
                     </div>
                 </article>
+                <article class="cards-hor" data-title="Superman" data-year="2025">
+                    <a href="../HTML/HTML-P/superman.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-superman.png" alt="'Superman' (2025) Dir: James Gunn" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Superman (2025)</h4>
+                        <p class="mov-directedby">Dirigida por  James Gunn</p>
+                        <p class="mov-hook">¿Sigue importando la verdad?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="28 Years Later" data-year="2025">
+                    <a href="../HTML/HTML-P/28yearslater.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-28yearslater.png" alt="'28 Years Later' (2025) Dir: Danny Boyle" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">28 Years Later (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Danny Boyle </p>
+                        <p class="mov-hook">¿Queda algún lugar seguro?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="The Bride!" data-year="2025">
+                    <a href="../HTML/HTML-P/thebride.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thebride.png" alt="'The Bride!' (2025) Dir: Maggie Gyllenhaal" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver >
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">The Bride! (2025)</h4>
+                        <p class="mov-directedby">Dirigida por  Maggie Gyllenhaal</p>
+                        <p class="mov-hook">¿Quién es el verdadero monstruo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Frankenstein" data-year="2025">
+                    <a href="../HTML/HTML-P/frankenstein.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-frankenstein.png" alt="'Frankenstein' () Dir: Guillermo del Toro" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Frankenstein (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Guillermo del Toro </p>
+                        <p class="mov-hook">¿El creador ama su obra?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Ballerina" data-year="2025">
+                    <a href="../HTML/HTML-P/ballerina.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-ballerina.png" alt="'Ballerina' (2025) Dir: Len Wiseman" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Ballerina (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Len Wiseman </p>
+                        <p class="mov-hook">¿Bailarás con la muerte?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Tron: Ares" data-year="2025">
+                    <a href="../HTML/HTML-P/tronares.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-tronares.html" alt="'Tron: Ares' (2025) Dir: Joachim Rønning" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Tron: Ares (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Joachim Rønning</p>
+                        <p class="mov-hook">¿Nos controlará el software?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Thunderbolts*" data-year="2025">
+                    <a href="../HTML/HTML-P/thunderbolts.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thunderbolts.png" alt="'Thunderbolts*' (2025) Dir: Jake Schreier" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Thunderbolts* (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Jake Schreier</p>
+                        <p class="mov-hook">¿Pueden los villanos ser héroes?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Minecraft" data-year="2025">
+                    <a href="../HTML/HTML-P/minecraft.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-minecraft.png" alt="'Minecraft' (2025) Dir: Jared Hess" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Minecraft (2025)</h4>
+                        <p class="mov-directedby">Dirigida por Jared Hess</p>
+                        <p class="mov-hook">¿Qué construirás para sobrevivir?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Mission: Impossible 8" data-year="2025">
+                    <a href="../HTML/HTML-P/missionimposible8.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-missionimposible8.png" alt="'Mission: Impossible 8' (2025) Dir: C. McQuarrie" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Mission: Impossible 8 (2025)</h4>
+                        <p class="mov-directedby">Dirigida por C. McQuarrie</p>
+                        <p class="mov-hook">¿Es el fin de Ethan?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Avatar: Fire and Ash" data-year="2025">
+                    <a href="../HTML/HTML-P/avatarashandfire.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-avatarashandfire.png" alt="'Avatar: Fire and Ash' (2025) Dir: James Cameron" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Avatar: Fire and Ash (2025)</h4>
+                        <p class="mov-directedby">Dirigida por James Cameron</p>
+                        <p class="mov-hook">¿El fuego lo quemará todo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Pulp Fiction" data-year="1994">
+                    <a href="../HTML/HTML-P/pulpfiction.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-pulpfiction." alt="'Pulp Fiction' (1994) Dir: Quentin Tarantino" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Pulp Fiction (1994)</h4>
+                        <p class="mov-directedby">Dirigida por Quentin Tarantino</p>
+                        <p class="mov-hook">¿Qué hay en el maletín?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Fight Club" data-year="1999">
+                    <a href="../HTML/HTML-P/fightclub.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-fightclub.png" alt="'Fight Club' (1999) Dir: David Fincher" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Fight Club (1999)</h4>
+                        <p class="mov-directedby">Dirigida por David Fincher</p>
+                        <p class="mov-hook">¿Eres libre o eres esclavo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="The Matrix" data-year="1999">
+                    <a href="../HTML/HTML-P/thematrix.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thematrix.png" alt="'The Matrix' (1999) Dir: Lana y Lilly Wachowski" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">The Matrix (1999)</h4>
+                        <p class="mov-directedby">Dirigida por Lana y Lilly Wachowski</p>
+                        <p class="mov-hook">¿Pastilla roja o azul?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Goodfellas" data-year="1990">
+                    <a href="../HTML/HTML-P/goodfellas.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-goodfellas.png" alt="'Goodfellas' (1990) Dir: Martin Scorsese" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Goodfellas (1990)</h4>
+                        <p class="mov-directedby">Dirigida por Martin Scorsese</p>
+                        <p class="mov-hook">¿Ser gángster es mejor?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Spirited Away" data-year="2001">
+                    <a href="../HTML/HTML-P/spiritedaway.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-spiritedaway.png" alt="'Spirited Away' (2001) Dir: Hayao Miyazaki" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Spirited Away (2001)</h4>
+                        <p class="mov-directedby">Dirigida por Hayao Miyazaki</p>
+                        <p class="mov-hook">¿Recordarás tu verdadero nombre?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Parasite" data-year="2019">
+                    <a href="../HTML/HTML-P/parasite.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-parasite.png" alt="'Parasite' (2019) Dir: Bong Joon-ho" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Parasite (2019)</h4>
+                        <p class="mov-directedby">Dirigida por Bong Joon-ho</p>
+                        <p class="mov-hook">¿Quién es el verdadero parásito?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Interstellar" data-year="2014">
+                    <a href="../HTML/HTML-P/interstellar.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-interstellar.png" alt="'Interstellar' (2014) Dir: Christopher Nolan" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Interstellar (2014)</h4>
+                        <p class="mov-directedby">Dirigida por Christopher Nolan</p>
+                        <p class="mov-hook">¿El amor trasciende dimensiones?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="City of God" data-year="2002">
+                    <a href="../HTML/HTML-P/cityofgod.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-cityofgod.png" alt="'City of God' (2002) Dir: F. Meirelles, K. Lund" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">City of God (2002)</h4>
+                        <p class="mov-directedby">Dirigida por F. Meirelles, K. Lund</p>
+                        <p class="mov-hook">¿Puedes escapar de la favela?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Whiplash" data-year="2014">
+                    <a href="../HTML/HTML-P/whiplash.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-whiplash.png" alt="'Whiplash' (2014) Dir: Damien Chazelle" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Whiplash (2014)</h4>
+                        <p class="mov-directedby">Dirigida por Damien Chazelle</p>
+                        <p class="mov-hook">¿Cuándo es suficiente el esfuerzo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Inception" data-year="2010">
+                    <a href="../HTML/HTML-P/inception.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-inception.png" alt="'Inception' (2010) Dir: Christopher Nolan" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Inception (2010)</h4>
+                        <p class="mov-directedby">Dirigida por Christopher Nolan</p>
+                        <p class="mov-hook">¿Es esto un sueño?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Oldboy" data-year="2003">
+                    <a href="../HTML/HTML-P/oldboy.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-oldboy.png" alt="'Oldboy' (2003) Dir: Park Chan-wook" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Oldboy (2003)</h4>
+                        <p class="mov-directedby">Dirigida por Park Chan-wook</p>
+                        <p class="mov-hook">¿Por qué te encarcelaron?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Donnie Darko" data-year="2001">
+                    <a href="../HTML/HTML-P/donniedarko.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-donniedarko.png" alt="'Donnie Darko' (2001) Dir: Richard Kelly" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Donnie Darko (2001)</h4>
+                        <p class="mov-directedby">Dirigida por Richard Kelly</p>
+                        <p class="mov-hook">¿Cuándo termina el mundo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="The Truman Show" data-year="1998">
+                    <a href="../HTML/HTML-P/thetrumanshow.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thetrumanshow.png" alt="'The Truman Show' (1998) Dir: Peter Weir" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">The Truman Show (1998)</h4>
+                        <p class="mov-directedby">Dirigida por Peter Weir</p>
+                        <p class="mov-hook">¿Tu vida es mentira?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Eternal Sunshine of the Spotless Mind" data-year="2004">
+                    <a href="../HTML/HTML-P/eternalsunshineofthespotlessmind.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-eternalsunshineofthespotlessmind.png" alt="'Eternal Sunshine of the Spotless Mind' (2004) Dir: Michel Gondry" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver >
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Eternal Sunshine of the Spotless Mind (2004)</h4>
+                        <p class="mov-directedby">Dirigida por Michel Gondry</p>
+                        <p class="mov-hook">¿Borrarías a tu ex?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Mulholland Drive" data-year="2001">
+                    <a href="../HTML/HTML-P/mulhollanddrive.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-mulhollanddrive.png" alt="'Mulholland Drive' (2001) Dir: David Lynch" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Mulholland Drive (2001)</h4>
+                        <p class="mov-directedby">Dirigida por David Lynch</p>
+                        <p class="mov-hook">¿Quién es la chica soñada?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Blade Runner" data-year="1982">
+                    <a href="../HTML/HTML-P/bladerunner.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-bladerunner.png" alt="'Blade Runner' (1982) Dir: Ridley Scott" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver >
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Blade Runner (1982)</h4>
+                        <p class="mov-directedby">Dirigida por Ridley Scott</p>
+                        <p class="mov-hook">¿Sueñan los androides?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Akira" data-year="1988">
+                    <a href="../HTML/HTML-P/akira.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-akira.png" alt="'Akira' (1988) Dir: Katsuhiro Otomo" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Akira (1988)</h4>
+                        <p class="mov-directedby">Dirigida por Katsuhiro Otomo</p>
+                        <p class="mov-hook">¿Controlarás el poder absoluto?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Hereditary" data-year="2018">
+                    <a href="../HTML/HTML-P/hereditary.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-hereditary.png" alt="'Hereditary' (2018) Dir: Ari Aster" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Hereditary (2018)</h4>
+                        <p class="mov-directedby">Dirigida por Ari Aster</p>
+                        <p class="mov-hook">¿Heredas las maldiciones?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Trainspotting" data-year="1996">
+                    <a href="../HTML/HTML-P/trainspotting.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-trainspotting.png" alt="'Trainspotting' (1996) Dir: Danny Boyle" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Trainspotting (1996)</h4>
+                        <p class="mov-directedby">Dirigida por Danny Boyle</p>
+                        <p class="mov-hook">¿Elegirás la vida?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="American Psycho" data-year="2000">
+                    <a href="../HTML/HTML-P/americanpsycho.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-americanpsycho.png" alt="'American Psycho' (2000) Dir: Mary Harron" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">American Psycho (2000)</h4>
+                        <p class="mov-directedby">Dirigida por Mary Harron</p>
+                        <p class="mov-hook">¿Te gustan Huey Lewis?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="The Big Lebowski" data-year="1998">
+                    <a href="../HTML/HTML-P/thebiglebowski.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thebiglebowski.png" alt="'The Big Lebowski' (1998) Dir: Joel y Ethan Coen" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">The Big Lebowski (1998)</h4>
+                        <p class="mov-directedby">Dirigida por Joel y Ethan Coen</p>
+                        <p class="mov-hook">¿Dónde está el dinero, Lebowski?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="A Clockwork Orange" data-year="1971">
+                    <a href="../HTML/HTML-P/aclockworkorange.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-aclockworkorange.png" alt="'A Clockwork Orange' (1971) Dir: Stanley Kubrick" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">A Clockwork Orange (1971)</h4>
+                        <p class="mov-directedby">Dirigida por Stanley Kubrick</p>
+                        <p class="mov-hook">¿Se puede forzar la bondad?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Don't Look Up" data-year="2021">
+                    <a href="../HTML/HTML-P/dontlookup.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-dontlookup.png" alt="'Don't Look Up' (2021) Dir: Adam McKay" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Don't Look Up (2021)</h4>
+                        <p class="mov-directedby">Dirigida por Adam McKay</p>
+                        <p class="mov-hook">¿Mirarás hacia arriba?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Arrival" data-year="2016">
+                    <a href="../HTML/HTML-P/arrival.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-arrival.png" alt="'Arrival' (2016) Dir: Denis Villeneuve" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver 
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Arrival (2016)</h4>
+                        <p class="mov-directedby">Dirigida por Denis Villeneuve</p>
+                        <p class="mov-hook">¿El tiempo es circular?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Midsommar" data-year="2019">
+                    <a href="../HTML/HTML-P/midsommar.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-midsommar.png" alt="'Midsommar' (2019) Dir: Ari Aster" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Midsommar (2019)</h4>
+                        <p class="mov-directedby">Dirigida por Ari Aster</p>
+                        <p class="mov-hook">¿Te unirás al ritual?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Get Out" data-year="2017">
+                    <a href="../HTML/HTML-P/getout.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-getout.png" alt="'Get Out' (2017) Dir: Jordan Peele" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Get Out (2017)</h4>
+                        <p class="mov-directedby">Dirigida por Jordan Peele</p>
+                        <p class="mov-hook">¿Es segura esa casa?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Pan's Labyrinth" data-year="2006">
+                    <a href="../HTML/HTML-P/panslabyrinth.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-panslabyrinth.png" alt="'Pan's Labyrinth' (2006) Dir: Guillermo del Toro" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Pan's Labyrinth (2006)</h4>
+                        <p class="mov-directedby">Dirigida por Guillermo del Toro</p>
+                        <p class="mov-hook">¿Es real la magia?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="Mad Max: Fury Road" data-year="2015">
+                    <a href="../HTML/HTML-P/madmaxfuryroad.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-madmaxfuryroad.png" alt="'Mad Max: Fury Road' (2015) Dir: George Miller" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Mad Max: Fury Road (2015)</h4>
+                        <p class="mov-directedby">Dirigida por George Miller</p>
+                        <p class="mov-hook">¿Quién mató al mundo?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="No Country for Old Men" data-year="2007">
+                    <a href="../HTML/HTML-P/nocountryforoldmen.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-nocountryforoldmen.png" alt="'No Country for Old Men' (2007) Dir: Joel y Ethan Coen" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">No Country for Old Men (2007)</h4>
+                        <p class="mov-directedby">Dirigida por Joel y Ethan Coen</p>
+                        <p class="mov-hook">¿Cara o cruz?</p>
+                    </div>
+                </article>
+                <article class="cards-hor" data-title="The Grand Budapest Hotel" data-year="2014">
+                    <a href="../HTML/HTML-P/thegrandhotelbudapest.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-thegrandhotelbudapest.png" alt="'The Grand Budapest Hotel' (2014) Dir: Wes Anderson" class="card-img">
+                        <div class="card-overlay">
+                            <span class="view-btn"><i class="fas fa-eye"></i> Ver </span>
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="mov-title">The Grand Budapest Hotel (2014)</h4>
+                        <p class="mov-directedby">Dirigida por Wes Anderson</p>
+                        <p class="mov-hook">¿Eres miembro de la sociedad?</p>
+                    </div>
+                </article><article class="cards-hor" data-title="La Haine" data-year="1995">
+                    <a href="../HTML/HTML-P/lahaine.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-lahaine.png" alt="'La Haine' (1995) Dir: ¿El odio engendra odio?"></a>
+                    <div class="card-content">
+                        <h4 class="mov-title">La Haine (1995)</h4>
+                        <p class="mov-directedby">Dirigida por Mathieu Kassovitz</p>
+                        <p class="mov-hook">¿El odio engendra odio?</p>
+                    </div>
+                </article><article class="cards-hor" data-title="Seven" data-year="1995">
+                    <a href="../HTML/HTML-P/seven.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-seven.png" alt="'Seven' (1995) Dir: "></a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Seven (1995)</h4>
+                        <p class="mov-directedby">Dirigida por David Fincher</p>
+                        <p class="mov-hook">¿Qué hay en la caja?</p>
+                    </div>
+                </article><article class="cards-hor" data-title="Perfect Blue" data-year="1997">
+                    <a href="../HTML/HTML-P/perfectblue.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-perfectblue.png" alt="'Perfect Blue' (1997) Dir: Satoshi Kon"></a>
+                    <div class="card-content">
+                        <h4 class="mov-title">Perfect Blue (1997)</h4>
+                        <p class="mov-directedby">Dirigida por Satoshi Kon</p>
+                        <p class="mov-hook">¿Quién es la verdadera tú?</p>
+                    </div>
+                </article><article class="cards-hor" data-title="12 Angry Men" data-year="1957">
+                    <a href="../HTML/HTML-P/12angrymen.html" class="card-link">
+                        <img src="../IMG/IMG-P/pelicula-12angrymen.png" alt="'12 Angry Men' (1957) Dir: Sidney Lumet"></a>
+                    <div class="card-content">
+                        <h4 class="mov-title">12 Angry Men (1957)</h4>
+                        <p class="mov-directedby">Dirigida por Sidney Lumet</p>
+                        <p class="mov-hook">¿Culpable o inocente?</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© 2025 Cartonboxd — Hecho con caos y cariño</p>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../JS/listar.js" defer></script>
+    <script src="../JS/peliculas-filter.js" defer></script>
 </body>
 </html>
