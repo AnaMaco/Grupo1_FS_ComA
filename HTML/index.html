@@ -12,8 +12,8 @@
 </head>
 <body>
     <script src="../JS/userlocal.js" defer></script>
-    <header  class="hero">
-        <nav>
+    <header class="hero">
+        <nav class="navbar">
             <ul class="menu">
                 <li class="logo"><a href="index.html"><img src="../IMG/Cartonboxd.png" alt="Logo de Cartonboxd"></a></li>
                 <li class="item"><a href="index.html">Inicio</a></li>
@@ -32,63 +32,139 @@
         <div class="hero-text">
             <h1>Cartonboxd</h1>
             <p class="hero-sub">El mundo del consumo sin culpa, reseñas honestas y estética caóticamente hermosa.</p>
-            <a id="pp" href="../HTML/reseñas.html" class="hero-btn">Explorar reseñas</a>
+            <a id="pp" href="reseñas.html" class="hero-btn">Explorar reseñas</a>
         </div>
     </header>
 
     <main>
-        <section class="seccion">
-            <h3>Últimas vistas</h3> <br>
+        <!-- CARRUSEL MEJORADO -->
+        <section class="carousel-section">
+            <div class="section-header">
+                <h2>Nuestros favoritos</h2>
+                <p class="section-subtitle">Películas que marcaron la diferencia</p>
+            </div>
+
             <div class="carrusel">
                 <div class="carrusel-inner">
+                    <!-- Slide 1 -->
                     <div class="slide">
-                        <img src="../IMG/Hambre.jpg" alt="Pelicula Los Juegos del Hambre">
+                        <img src="../IMG/IMG-P/pelicula-sinners.png" alt="Sinners">
                         <div class="overlay">
-                            <h2>Los Juegos del Hambre</h2>
-                            <p>Mi serie distópica favorita: contraste visual, crítica social y revolución.</p>
-                            <a href="https://letterboxd.com/film/the-hunger-games-catching-fire/" class="cta-btn">Saber más</a>
+                            <h2>Sinners</h2>
+                            <p class="overlay-subtitle">(2025) Ryan Coogler</p>
+                            <p class="overlay-desc">¿El mal se hereda siempre?</p>
+                            <a href="HTML-P/sinners.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
                         </div>
                     </div>
+
+                    <!-- Slide 2 -->
                     <div class="slide">
-                        <img src="../IMG/3.jpg" alt="Pelicula Harry Potter">
+                        <img src="../IMG/IMG-P/pelicula-honeydont.png" alt="Honey Don't">
                         <div class="overlay">
-                            <h2>Harry Potter</h2>
-                            <p>La obra modela un símbolo de desafío — el Sinsajo — motor de rebelión.</p>
-                            <a href="https://letterboxd.com/film/harry-potter-and-the-philosophers-stone/" class="cta-btn">Conocer</a>
+                            <h2>Honey Don't</h2>
+                            <p class="overlay-subtitle">(2025) Ethan Coen</p>
+                            <p class="overlay-desc">¿Puede un culto salvarte?</p>
+                            <a href="HTML-P/honeydont.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
                         </div>
                     </div>
+
+                    <!-- Slide 3 -->
                     <div class="slide">
-                        <img src="../IMG/6.jpg" alt="Pelicula Viernes 13">
+                        <img src="../IMG/IMG-P/pelicula-mickey17.png" alt="Mickey 17">
                         <div class="overlay">
-                            <h2>Viernes 13</h2>
-                            <p>Ya no es sobrevivir: es derrocar al sistema que los oprime.</p>
-                            <a href="https://letterboxd.com/film/friday-the-13th-the-final-chapter/" class="cta-btn">Ver más</a>
+                            <h2>Mickey 17</h2>
+                            <p class="overlay-subtitle">(2025) Bong Joon-ho</p>
+                            <p class="overlay-desc">¿Cuántas veces puedes morir?</p>
+                            <a href="HTML-P/mickey17.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="../IMG/IMG-P/pelicula-themapthatleadstoyou.png" alt="The Map That Leads To You">
+                        <div class="overlay">
+                            <h2>The Map That Leads To You</h2>
+                            <p class="overlay-subtitle">(2025) Lasse Hallström</p>
+                            <p class="overlay-desc">¿Existe el destino perfecto?</p>
+                            <a href="HTML-P/themapthatleadstoyou.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <img src="../IMG/IMG-P/pelicula-themonkey.png" alt="The Monkey">
+                        <div class="overlay">
+                            <h2>The Monkey</h2>
+                            <p class="overlay-subtitle">(2025) Osgood Perkins</p>
+                            <p class="overlay-desc">¿Puedes escapar de tu suerte?</p>
+                            <a href="HTML-P/themonkey.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <img src="../IMG/IMG-P/pelicula-weapons.png" alt="Weapons">
+                        <div class="overlay">
+                            <h2>Weapons</h2>
+                            <p class="overlay-subtitle">(2025) Zach Cregger</p>
+                            <p class="overlay-desc">¿A dónde van los niños?</p>
+                            <a href="HTML-P/weapons.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Ver reseña</a>
                         </div>
                     </div>
                 </div>
-                <button class="prev"><</button>
-                <button class="next">></button>
+
+                <!-- Controles -->
+                <button class="prev" aria-label="Película anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="next" aria-label="Película siguiente"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Indicadores de slide -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
+                    <span class="indicator" data-slide="5"></span>
+                </div>
             </div>
         </section>
 
+        <!-- SECCIÓN DE CARDS -->
         <section class="cards-seccion">
-            <h3>- Última seleccion de peliculas -</h3> 
-            <br>
+            <div class="section-header">
+                <h2>Última selección</h2>
+                <p class="section-subtitle">Películas recientes añadidas a nuestro catálogo</p>
+            </div>
+
             <div class="cards-container">
                 <article class="card">
                     <img src="../IMG/Posters/Freakier_Friday_(film_poster).png" alt="Freakier Friday">
-                    <h4>Nisha Ganatra - Comedia</h4>
-                    <p>Anna tiene una hija y está a punto de convertirse en madrastra de otra. Mientras se enfrentan...</p>
+                    <div class="card-body">
+                        <h4>Freakier Friday (2025)</h4>
+                        <p class="card-director">Nisha Ganatra</p>
+                        <p>Anna tiene una hija y está a punto de convertirse en madrastra de otra. Mientras se enfrentan a nuevas dinámicas familiares...</p>
+                        <a href="peliculas.html" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
+
                 <article class="card">
                     <img src="../IMG/Posters/The_Monkey(poster).jpg" alt="The Monkey">
-                    <h4>Stephen King - Terror</h4>
-                    <p>Dos hermanos gemelos encuentran un misterioso mono de cuerda y una serie de muertes atroces...</p>
+                    <div class="card-body">
+                        <h4>The Monkey (2025)</h4>
+                        <p class="card-director">Osgood Perkins</p>
+                        <p>Dos hermanos gemelos encuentran un misterioso mono de cuerda y una serie de muertes atroces comienzan a suceder...</p>
+                        <a href="peliculas.html" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
+
                 <article class="card">
                     <img src="../IMG/Posters/27Noches(poster).jpg" alt="27 Noches">
-                    <h4>Daniel Hendler - Comedia/Drama </h4>
-                    <p>Una mujer de 83 años es internada por sus hijas después de mostrar actitudes de libertinaje. Por lo que...</p>
+                    <div class="card-body">
+                        <h4>27 Noches (2025)</h4>
+                        <p class="card-director">Daniel Hendler</p>
+                        <p>Una mujer de 83 años es internada por sus hijas después de mostrar actitudes de libertinaje. Un perito debe decidir...</p>
+                        <a href="peliculas.html" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
             </div>
         </section>
