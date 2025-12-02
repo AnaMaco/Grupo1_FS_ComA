@@ -56,7 +56,7 @@ nav{
     text-decoration:none;
     font-weight:600;
     transition:color 200ms ease, transform 200ms ease;
-    font-size: 14px;
+    font-size: 20px;
     position: relative;
     padding:6px 4px;
 }
@@ -80,7 +80,8 @@ nav{
     transform: translateY(-2px);
 }
 .logo img{
-    height:50px;
+    height:80px;
+    width: auto;
     filter:drop-shadow(0 2px 4px var(--shadow));
 }
 .logo{ margin-right: auto; }
